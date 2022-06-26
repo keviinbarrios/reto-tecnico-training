@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Nave extends Model
 {
     use HasFactory;
+    public function type(){
+        return $this->belongsTo(type::class,'type_id');
+    }
 }
