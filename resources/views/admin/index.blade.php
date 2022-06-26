@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-title">
-                    Listado de naves <a href="{{-- {{route('admin.create')}} --}}" class="btn btn-sm btn-primary">Crear</a>
+                    Listado de naves <a href="{{route('admin.create')}}" class="btn btn-sm btn-primary">Crear</a>
                 </div>
             </div>
             <div class="card-body">
@@ -30,14 +30,15 @@
                         @foreach ($naves as $nave)
                         <tr>
                             <td>{{$nave->name}}</td>
-                            <td><img src="{{-- {{asset('images/uploads/naves/'.$naves->featured)}} --}}" alt="" width="120"> </td>
+                            <td><img src="{{asset('images/uploads/naves/'.$nave->featured)}}" alt="" width="120"> </td>
                             <td>{{$nave->country}}</td>
                             <td>{{$nave->fuel}}</td>
                             <td>{{$nave->uptime}}</td>
+                            
                             <td>{{$nave->type->name}}</td>
                              <td>
-                                <a href="" class="btn btn-warning">Editar</a>
-                                <form action="" method="POST">
+                                <a href="{{route('admin.edit', $nave->id)}}" class="btn btn-warning">Editar</a>
+                                <form action="{{route('admin.delete', $nave->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger">Eliminar</button>

@@ -29,7 +29,7 @@
         <div class="row justify-content-center events-grid">
             @foreach ( $naves as $nave )
             <div class="col-md-4 col-sm-12 text-center event mb-4">
-                <img src="https://source.unsplash.com/1280x720/?Development Conferences" class="img-fluid" alt="Norway" style="width:100%; height:100%; object-fit: cover;">
+                <img src="/images/uploads/naves/{{$nave->featured}}" class="img-fluid" alt="Norway" style="width:100%; height:100%; object-fit: cover;">
                 <div class="text-block">
                     <h4 class="text-block-title">{{$nave->name}}</h4>
                     <p class="text-block-p mb-0 fw-400">Tipo: {{$nave->type->name}}</p>
