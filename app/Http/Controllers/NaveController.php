@@ -19,7 +19,7 @@ class NaveController extends Controller
         if ($request->hasfile('featured')) {
             $file = $request->file('featured');
 
-            $img_name = time() . '_course.' . $file->getClientOriginalExtension();
+            $img_name = time() . '_nave.' . $file->getClientOriginalExtension();
             $detinationPath = 'images/uploads/naves';
             $uploadSuccess = $file->move($detinationPath, $img_name);
         }
@@ -55,16 +55,18 @@ class NaveController extends Controller
         if ($request->hasfile('featured')) {
             $file = $request->file('featured');
 
-            $img_name = time() . '_course.' . $file->getClientOriginalExtension();
+            $img_name = time() . '_nave.' . $file->getClientOriginalExtension();
             $detinationPath = 'images/uploads/naves';
             $uploadSuccess = $file->move($detinationPath, $img_name);
         }
+       
         $nave->type_id = $request->type_id;
         $nave->name = $request->name;
         $nave->country = $request->country;
         $nave->uptime = $request->uptime;
         $nave->fuel = $request->fuel;
-        $nave->featured = $img_name;
+        $nave->featured = isset($img_name)? $img_name: $nave->featured;
+        
 
         $nave->save();
 

@@ -33,7 +33,7 @@ html body header .banner-container .banner-image {
   width: 100%;
 }
 html body header .banner-container .text-block {
-  color: black;
+  color: white;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -57,7 +57,7 @@ html body main .nave .banner-image {
   width: 100%;
 }
 html body main .nave .text-block {
-  color: black;
+  color: white;
   position: absolute;
   bottom: 10px;
   left: 20px;

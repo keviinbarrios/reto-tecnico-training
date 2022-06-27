@@ -22,10 +22,13 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="category">TIPOS DE NAVES</label>
+                            <label for="type">TIPOS DE NAVES</label>
                             <select  class="form-control"  name="type_id" id="type_id" >
                                 @foreach ($types as $type)
-                                    <option value="{{$type->id}}">{{$type->name}}</option>
+                                         <option value="{{$type->id}}"
+                                            <?= $type->id == $nave->type_id? "selected" : '' ?>
+                                             >{{$type->name}}
+                                         </option>
                                 @endforeach
                             </select>
                         </div>
@@ -56,11 +59,12 @@
                                     <input type="file" name="featured" class="custom-file-input" id="featured">
                                     <label class="custom-file-label" for="featured">Elegir archivo</label>
                                 </div>
+                                <img src="{{asset('images/uploads/naves/'.$nave->featured)}}" alt="" width="120">
                             </div>
                         </div>
                        
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Crear</button>
+                            <button type="submit" class="btn btn-primary">editar</button>
                         </div>
                     </div>
                 </form>
