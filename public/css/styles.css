@@ -50,27 +50,27 @@ html body header .banner-container .text-block .text-block-p {
   font-weight: 300;
   font-size: 1rem;
 }
-html body main .event {
+html body main .nave {
   position: relative;
 }
-html body main .event .banner-image {
+html body main .nave .banner-image {
   width: 100%;
 }
-html body main .event .text-block {
+html body main .nave .text-block {
   color: black;
   position: absolute;
   bottom: 10px;
   left: 20px;
 }
-html body main .event .text-block .text-block-title {
+html body main .nave .text-block .text-block-title {
   font-size: 1.2rem;
   font-weight: 900;
 }
-html body main .event .text-block .text-block-subtitle {
+html body main .nave .text-block .text-block-subtitle {
   font-weight: 600;
   font-size: 0.8rem;
 }
-html body main .event .text-block .text-block-p {
+html body main .nave .text-block .text-block-p {
   font-weight: 300;
   font-size: 0.8rem;
 }

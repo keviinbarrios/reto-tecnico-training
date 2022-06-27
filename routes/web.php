@@ -32,4 +32,5 @@ Route::get('admin/naves/{nave}/edit',[NaveController::class,'edit'])->name('admi
 Route::post('admin/naves/{nave}/update', [NaveController::class,'update'])->name('admin.update');
 Route::delete('/admin/naves/{nave}/delete',[NaveController::class,'delete'])->name('admin.delete');
 
-
+/* Filtrado por tipo de nave */
+Route::post('nave/filter', [HomeController::class,'naveFilter']);

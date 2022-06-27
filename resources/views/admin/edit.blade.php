@@ -36,7 +36,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="date-of-event">PAIS</label>
+                            <label for="country">PAIS</label>
                             <input type="text" value="{{$nave->country}}" name="country" placeholder="Ingrese el pais de la nave" class="form-control" id="country">
                         </div>
                         <div class="form-group">
