@@ -86,7 +86,7 @@
                     let newGrid = "";
 
                     naves.forEach(nave => {
-                        newGrid += `<div class="col-md-4 col-sm-12 nave mb-4">
+                        newGrid += `<div class="col-md-4 col-sm-12 d-inline-flex p-3 nave mb-4">
                                     <img src="/images/uploads/naves/${nave['featured']}" class="img-fluid" alt="Norway" style="width:100%; height:100%; object-fit: cover;">
                                     <div class="text-block">
                                     <h4 class="text-block-title">${nave['name']}</h4>
