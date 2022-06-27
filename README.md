@@ -7,4 +7,4 @@ para migrar todas las tablas de la base de datos
 
 3.npm install && npm run dev
 
-4. php artisan serve
+4.php artisan serve
